@@ -21,17 +21,17 @@ Open-source cookie stealer browser send to Telegram easy to use. Written in C# a
 
 ## Usage
 
-- **Step 1:**: First, open the "CookieStealer.sln" solution in Visual Studio
-- **Step 2:**: Compile and run
-- **Step 3:**: Open a file name "telegram.txt" located in the "bin" folder ( Note: that you must run the file Step 2 to initialize the configuration that create telegram.txt )
+- **Step 1:**: First, open the "CookieStealer.sln" solution in Visual Studio.
+- **Step 2:**: Compile and run.
+- **Step 3:**: Open a file name "telegram.txt" located in the "bin" folder ( Note: that you must run the file Step 2 to initialize the configuration that create telegram.txt ).
 - **Step 4:**: Replace setting in a file that for sending data to Telegram.
-- 
-  ![image](https://github.com/h4x0rpeter/CookieStealer/assets/148678111/17ac7a5a-e99f-43b9-9c2f-411ca052c29c)
+- **Step 5:**: Run the file "CookieStealer.exe" and build the file "start.bat".
+![image](https://github.com/h4x0rpeter/CookieStealer/assets/148678111/b8004ed4-6f9e-40d2-be6b-05edb5fe90d4)
 
 
 ## Installation
 
-- **Install [Visual Studio](https://visualstudio.microsoft.com/downloads/) (if not already installed)**: 
+- **Install [Visual Studio](https://visualstudio.microsoft.com/downloads/) (if not already installed).**: 
 
 
 
