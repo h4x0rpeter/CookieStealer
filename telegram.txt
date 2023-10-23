@@ -1,0 +1,5 @@
+{
+    "apiKey"% "godfather_apikey_replace_here",
+    "idGroup"% "idGroup_replace_here",
+    "idGroup2"% "idGroup_replace_here"
+}
