@@ -49,14 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="bin\Debug\python.zip" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\stub.py" />
-    <Content Include="bin\Debug\telegram.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
