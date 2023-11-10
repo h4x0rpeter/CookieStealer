@@ -130,7 +130,7 @@ namespace CookieStealer
 
             File.WriteAllLines(fileBuild, list);
 
-            PackNative(fileBuild);
+            //PackNative(fileBuild);
 
         }
 
